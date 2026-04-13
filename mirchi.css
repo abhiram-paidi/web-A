@@ -1,0 +1,232 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
+}
+
+/* PAGE */
+.page {
+    padding: 30px 15px;
+}
+
+/* CARD */
+.card {
+    max-width: 950px;
+    margin: auto;
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+h1, h2 {
+    color: #f8fafc; /* clean white */
+    letter-spacing: 0.5px;
+}
+
+.age-time,
+.languages,
+.creators p,
+.bottom p {
+    color: #94a3b8; /* softer grey */
+}
+
+.h {
+    color: #38bdf8; /* light blue accent */
+}
+
+/* ---------------- TOP SECTION ---------------- */
+
+/* CENTER ALIGN */
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* IMAGE */
+.movie-img img {
+    width: 220px;
+    border-radius: 12px;
+}
+
+/* REVIEW */
+.review {
+    max-width: 500px;
+}
+
+.review h1 {
+    margin-bottom: 10px;
+}
+
+.year {
+    font-size: 14px;
+}
+
+
+.star {
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #fbbf24;
+}
+
+.age-time {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #9ca3af;
+}
+
+.languages {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #9ca3af;
+}
+
+/* GENRES */
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.genres span {
+    background: #334155;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.creators p {
+    margin-bottom: 10px;
+    color: #9ca3af;
+}
+
+.creators p strong {
+    color: #e2e8f0;
+}
+
+/* ---------------- MIDDLE SECTION (CAST) ---------------- */
+
+.middle {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+}
+
+.cast-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 per row */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* CAST ITEM */
+.cast-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* IMAGE */
+.cast-item img {
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.actor {
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.role {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ---------------- BOTTOM ---------------- */
+
+.bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 15px;
+}
+
+.bottom p {
+    color: #9ca3af;
+    line-height: 1.7;      /* line spacing */
+    margin-bottom: 12px;   /* space between paragraphs */
+}
+
+/* HEADING */
+.bottom h2 {
+    margin-bottom: 10px;   /* space below heading */
+}
+
+.bottom p strong {
+    color: #f1f5f9;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .cast-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .review {
+        max-width: 100%;
+    }
+    .star {
+        text-align: left;
+    }
+    .creators {
+        text-align: left;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+
+    .cast-list {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
+
+    .movie-img img {
+        width: 180px;
+    }
+}
